@@ -5,7 +5,7 @@ const [value, setValue] = useState('')
 一样的 reducer 代表绑定的reducer 那个纯文本function , initialValue给state  
 dispatch === setValue 改变call
 
- v1.
+## v1.
 在被provider包围的子组件里面  任一组件都可以使用useContext to get context value
 
 const blogPosts = [{title: "Blog Post #1"}, {title: "Blog Post #2}]
@@ -20,15 +20,15 @@ return <BlogContext.Provider value={blogPosts}>{children}</BlogContext.Provider>
 	return <Text>{item.title}</Text>
      }}
 
-** v2. 
+## v2. 
 子组件call dispatch 使context里面接收指令更改数据
 
 addBlogPost is callback for child components => blogProvider will rerender
 
-** v3. 
+## v3. 
 use useReducer to replace all the function body code
 
-** v4.
+## v4.
 To avoid duplicate code for different context, say comment, image, blogpost etc
 create a auto context creation 
 addBlogPost = dispatch => { 				//This dispatch just a name for createDataContext to call
